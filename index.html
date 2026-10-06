@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="RutaGo LATAM: soluciones, recursos y orientación para conductores y repartidores de Latinoamérica.">
+  <title>RutaGo LATAM | Tu ruta, tus oportunidades</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">🌎 RutaGo LATAM · Soluciones para conductores y repartidores</div>
+
+  <header class="nav">
+    <a class="brand" href="#inicio" aria-label="RutaGo LATAM">
+      <img src="assets/logo.svg" alt="RutaGo">
+      <span>Ruta<span>Go</span><small>LATAM</small></span>
+    </a>
+    <nav id="mainNav">
+      <a href="#apps">Apps</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#paises">Países</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <a class="nav-cta" href="#selector">Empezar ahora →</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> PLATAFORMA LATINOAMERICANA</div>
+          <h1>Tu ruta.<br><span>Tus oportunidades.</span></h1>
+          <p class="hero-copy">Una plataforma para conductores y repartidores que reúne soluciones, orientación y recursos para trabajar con las principales apps de movilidad y delivery de Latinoamérica.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#selector">Encontrar mi opción <span>→</span></a>
+            <a class="btn ghost" href="#apps">Ver aplicaciones</a>
+          </div>
+          <div class="trust">
+            <span>✓ Multipaís</span>
+            <span>✓ Multiplataforma</span>
+            <span>✓ Atención personalizada</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-top"><span class="live-dot"></span> RUTAGO RADAR</div>
+          <div class="radar-title">Selecciona tu mercado</div>
+          <div class="mini-select"><span>🇨🇴</span><b> Colombia</b><span class="chev">⌄</span></div>
+          <div class="mini-apps">
+            <div><strong>UB</strong><span>Uber</span></div>
+            <div><strong>DD</strong><span>DiDi</span></div>
+            <div><strong>RP</strong><span>Rappi</span></div>
+            <div><strong>IN</strong><span>inDrive</span></div>
+          </div>
+          <div class="opportunity"><div><span>Disponibilidad</span><b>Consulta por ciudad</b></div><span class="arrow">↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>18</strong><span>mercados regionales</span></div>
+      <div><strong>15+</strong><span>apps contempladas</span></div>
+      <div><strong>1</strong><span>plataforma central</span></div>
+      <div><strong>24/7</strong><span>acceso a recursos</span></div>
+    </section>
+
+    <section class="section" id="selector">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">01 · ENCUENTRA TU OPCIÓN</div>
+          <h2>¿Dónde trabajas?</h2>
+        </div>
+        <p>Elige tu país y descubre las plataformas y servicios configurados para ese mercado.</p>
+      </div>
+
+      <div class="selector-box">
+        <div class="field">
+          <label for="country">País</label>
+          <select id="country"></select>
+        </div>
+        <div class="field">
+          <label for="app">Aplicación</label>
+          <select id="app"><option value="">Primero selecciona un país</option></select>
+        </div>
+        <div class="field">
+          <label for="need">¿Qué necesitas?</label>
+          <select id="need">
+            <option value="registro">Orientación para registrarte</option>
+            <option value="reactivacion">Ayuda con acceso / reactivación</option>
+            <option value="cuenta">Consultar opciones de cuenta</option>
+            <option value="asesoria">Asesoría para trabajar con apps</option>
+            <option value="otro">Otra consulta</option>
+          </select>
+        </div>
+        <button class="btn primary" id="findBtn">Continuar →</button>
+      </div>
+      <div id="selectionResult" class="selection-result hidden"></div>
+    </section>
+
+    <section class="section dark-section" id="apps">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 · ECOSISTEMA</div>
+          <h2>Las apps que mueven la región</h2>
+        </div>
+        <p>La disponibilidad cambia por país y ciudad. RutaGo muestra el mercado seleccionado para evitar información genérica.</p>
+      </div>
+      <div class="app-grid" id="appGrid"></div>
+      <div class="note">* Las plataformas y modalidades disponibles pueden cambiar. Verifica siempre los requisitos y condiciones oficiales de cada plataforma antes de registrarte o prestar servicios.</div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">03 · SOLUCIONES</div>
+          <h2>Todo en un solo lugar</h2>
+        </div>
+        <p>Un catálogo pensado para las necesidades reales de conductores y repartidores.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service"><div class="icon">01</div><h3>Registro y orientación</h3><p>Te guiamos sobre pasos, documentos y canales oficiales para comenzar en una plataforma.</p><a href="#selector">Consultar →</a></article>
+        <article class="service"><div class="icon">02</div><h3>Acceso y reactivación</h3><p>Orientación para revisar bloqueos, requisitos y procesos de soporte o apelación disponibles.</p><a href="#selector">Consultar →</a></article>
+        <article class="service"><div class="icon">03</div><h3>Opciones de cuenta</h3><p>Consulta alternativas de acceso o gestión disponibles en tu mercado, siempre sujetas a las reglas de cada plataforma.</p><a href="#selector">Consultar →</a></article>
+        <article class="service"><div class="icon">04</div><h3>Asesoría para conductores</h3><p>Ayuda para elegir aplicaciones, organizar tu actividad y conocer oportunidades de tu ciudad.</p><a href="#selector">Consultar →</a></article>
+        <article class="service"><div class="icon">05</div><h3>Recursos y herramientas</h3><p>Calculadoras, guías, recomendaciones y contenido práctico para tomar mejores decisiones.</p><a href="#recursos">Ver recursos →</a></article>
+        <article class="service accent-service"><div class="icon">06</div><h3>Atención personalizada</h3><p>Cuéntanos tu país, ciudad, vehículo y aplicación para orientarte con una ruta adecuada.</p><a href="#contacto">Hablar con RutaGo →</a></article>
+      </div>
+    </section>
+
+    <section class="section workflow" id="como-funciona">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">04 · SIMPLE</div>
+          <h2>Así funciona RutaGo</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Selecciona tu país</h3><p>RutaGo adapta el catálogo a tu mercado.</p></div>
+        <div class="step"><span>02</span><h3>Elige tu app</h3><p>Selecciona Uber, DiDi, Rappi, PedidosYa, iFood u otra disponible.</p></div>
+        <div class="step"><span>03</span><h3>Indica tu necesidad</h3><p>Registro, acceso, orientación, cuenta o asesoría.</p></div>
+        <div class="step"><span>04</span><h3>Recibe orientación</h3><p>Te dirigimos al proceso o canal correspondiente.</p></div>
+      </div>
+    </section>
+
+    <section class="section countries" id="paises">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">05 · COBERTURA</div>
+          <h2>RutaGo por Latinoamérica</h2>
+        </div>
+        <p>La arquitectura está preparada para crecer país por país sin reconstruir el sitio.</p>
+      </div>
+      <div class="country-grid" id="countryGrid"></div>
+    </section>
+
+    <section class="section resources" id="recursos">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">06 · RECURSOS</div>
+          <h2>Centro para conductores</h2>
+        </div>
+      </div>
+      <div class="resource-grid">
+        <div class="resource"><span>💰</span><h3>Calcula tu rentabilidad</h3><p>Compara pago, distancia, tiempo y costos antes de aceptar una oportunidad.</p><button onclick="alert('Módulo de calculadora listo para conectar en la siguiente versión.')">Abrir herramienta →</button></div>
+        <div class="resource"><span>📋</span><h3>Checklist de registro</h3><p>Organiza documentos y requisitos antes de iniciar el registro.</p><button onclick="alert('Checklist preparado para ampliar por país.')">Ver checklist →</button></div>
+        <div class="resource"><span>🧭</span><h3>Guías por ciudad</h3><p>Próximamente: información local para elegir horarios, zonas y plataformas.</p><button onclick="document.querySelector('#contacto').scrollIntoView({behavior:'smooth'})">Solicitar guía →</button></div>
+      </div>
+    </section>
+
+    <section class="section payments" id="pagos">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">07 · PAGOS</div>
+          <h2>Formas de pago</h2>
+        </div>
+        <p>Selecciona tu país y contacta a un asesor para recibir los datos o el enlace de pago correspondiente en tiempo real.</p>
+      </div>
+      <div class="payment-policy">
+        <div class="policy-badge">50 / 50</div>
+        <div><strong>Política de pago</strong><p>50% para iniciar el trabajo + 50% al terminar el trabajo acordado.</p></div>
+      </div>
+      <div class="payment-grid">
+        <article class="payment-card featured">
+          <div class="payment-country">🇨🇴 COLOMBIA</div>
+          <h3>Pagos nacionales</h3>
+          <div class="payment-logos">
+            <div class="payment-method"><img src="assets/payments/nequi.svg" alt="Nequi"><span>Nequi</span></div>
+            <div class="payment-method"><img src="assets/payments/breb.svg" alt="Bre-B"><span>Bre-B</span></div>
+            <div class="payment-method"><img src="assets/payments/daviplata.svg" alt="DaviPlata"><span>DaviPlata</span></div>
+          </div>
+          <p>Para conocer el número o los datos exactos de pago, solicita la información directamente a un asesor.</p>
+          <a class="payment-btn" href="https://wa.me/573237680838?text=Hola%20RutaGo%2C%20quiero%20realizar%20un%20pago%20desde%20Colombia.%20Por%20favor%2C%20env%C3%ADenme%20los%20datos%20de%20pago%20en%20tiempo%20real." target="_blank" rel="noopener">Contactar asesor →</a>
+        </article>
+        <article class="payment-card">
+          <div class="payment-country">🌎 INTERNACIONAL</div>
+          <h3>PayPal</h3>
+          <div class="payment-logo"><img src="assets/payments/paypal.svg" alt="PayPal"></div>
+          <p>Disponible para pagos internacionales. El asesor te enviará el enlace correcto en tiempo real antes de realizar el depósito.</p>
+          <a class="payment-btn" href="https://wa.me/573237680838?text=Hola%20RutaGo%2C%20quiero%20pagar%20por%20PayPal.%20Por%20favor%2C%20env%C3%ADenme%20el%20link%20de%20pago%20en%20tiempo%20real." target="_blank" rel="noopener">Solicitar link de PayPal →</a>
+        </article>
+        <article class="payment-card">
+          <div class="payment-country">🌎 INTERNACIONAL</div>
+          <h3>Payoneer</h3>
+          <div class="payment-logo"><img src="assets/payments/payoneer.svg" alt="Payoneer"></div>
+          <p>Disponible como alternativa internacional. Solicita a un asesor el enlace o instrucciones de pago antes de depositar.</p>
+          <a class="payment-btn" href="https://wa.me/573237680838?text=Hola%20RutaGo%2C%20quiero%20pagar%20por%20Payoneer.%20Por%20favor%2C%20env%C3%ADenme%20el%20link%20de%20pago%20en%20tiempo%20real." target="_blank" rel="noopener">Solicitar link de Payoneer →</a>
+        </article>
+      </div>
+      <div class="advisor-payment-box">
+        <div class="advisor-icon">⚡</div>
+        <div><strong>¿Quieres pagar ahora?</strong><p>Contacta a un asesor para recibir el link o los datos de pago <b>en tiempo real</b>. Después de realizar el depósito, envía el comprobante por WhatsApp para que podamos verificarlo y confirmar tu pago lo más rápido posible.</p></div>
+        <a href="https://wa.me/573237680838?text=Hola%20RutaGo%2C%20quiero%20realizar%20un%20pago.%20Necesito%20el%20link%20o%20los%20datos%20para%20pagar%20y%20quiero%20enviar%20el%20comprobante%20para%20confirmaci%C3%B3n." target="_blank" rel="noopener">Hablar con un asesor</a>
+      </div>
+      <div class="payment-note">🔐 <b>Importante:</b> no publicamos números de cuentas, teléfonos de billeteras ni enlaces de pago personales. Los datos exactos se entregan directamente por un asesor antes de realizar el pago. Los nombres y marcas de los métodos de pago pertenecen a sus respectivos titulares.</div>
+    </section>
+    <section class="cta-section" id="contacto">
+      <div>
+        <div class="eyebrow">¿LISTO PARA EMPEZAR?</div>
+        <h2>Cuéntanos dónde estás<br>y qué necesitas.</h2>
+        <p>RutaGo LATAM está diseñado para crecer contigo.</p>
+      </div>
+      <div class="contact-card">
+        <form id="contactForm">
+          <div class="two">
+            <input required id="name" placeholder="Tu nombre">
+            <input required id="city" placeholder="Ciudad">
+          </div>
+          <input required id="phone" placeholder="WhatsApp / teléfono">
+          <textarea required id="message" rows="4" placeholder="¿Qué necesitas?"></textarea>
+          <button class="btn primary" type="submit">Enviar consulta →</button>
+          <small>Este formulario abre WhatsApp con tu mensaje. El envío se realiza directamente por WhatsApp.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="brand footer-brand"><img src="assets/logo.svg" alt=""><span>Ruta<span>Go</span><small>LATAM</small></span></div>
+      <p>Soluciones y recursos para conductores y repartidores de Latinoamérica.</p>
+      <div class="footer-links"><a href="#apps">Apps</a><a href="#servicios">Servicios</a><a href="#paises">Países</a><a href="#contacto">Contacto</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 RutaGo LATAM</span><span>Las marcas y apps mencionadas pertenecen a sus respectivos propietarios.</span></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
